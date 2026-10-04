@@ -92,6 +92,14 @@ Never commit credentials or secrets.
 
 Use environment variables or approved secret-management mechanisms.
 
+How to handle secrets:
+
+- Store real values in the hosting provider's settings (for example Cloudflare, Supabase or Vercel) or in a local `.env` file.
+- `.env`, `.env.*` and other local secret files are gitignored. Do not remove these rules.
+- Document every required variable in `.env.example`, with names only and no values.
+- Values exposed to the browser (for example `VITE_*` or `NEXT_PUBLIC_*`) are public. Never put a secret in them.
+- If a secret is committed, treat it as leaked: rotate it at the provider first, then remove it from the repository.
+
 Apply least privilege to external services.
 
 Validate authorization separately from authentication.

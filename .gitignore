@@ -1,0 +1,38 @@
+# --- Secrets and local environment ---
+# Real values live in the hosting provider's settings or in a local file.
+# Document required variables in .env.example (committed, without values).
+.env
+.env.*
+!.env.example
+.dev.vars
+.dev.vars.*
+*.pem
+*.key
+
+# --- Tool caches and local state ---
+.wrangler/
+.vercel/
+.netlify/
+.supabase/
+
+# --- Dependencies and build output ---
+node_modules/
+dist/
+build/
+.next/
+.astro/
+coverage/
+
+# --- Logs ---
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# --- OS and editor ---
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/*
+!.vscode/extensions.json

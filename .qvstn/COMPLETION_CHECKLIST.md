@@ -14,6 +14,7 @@ Before declaring scoped implementation complete, verify the following.
 - [ ] Branch scope is coherent.
 - [ ] No unexpected files are included.
 - [ ] No credentials or secrets are included.
+- [ ] New environment variables are documented in `.env.example`.
 
 ## Implementation
 
